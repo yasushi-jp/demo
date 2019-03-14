@@ -9,10 +9,10 @@ x = digits.images
 y = digits.target
 x = x.reshape((-1, 64)) # 二次元配列を一次元配列に変換
 
-# データを学習用とテスト用に分割する --- 
+# データを学習用とテスト用に分割する
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
-# データを学習
+# データを学習（アルゴリズムSVM：（サポートベクトルマシン/サポートベクターマシン））
 clf = svm.LinearSVC()
 clf.fit(x_train, y_train)
 
